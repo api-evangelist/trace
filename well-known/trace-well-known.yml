@@ -1,0 +1,38 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of https://www.tracehq.com and https://app.tracehq.com
+host: https://www.tracehq.com
+notes: >-
+  No well-known discovery surface found. Trace was acquired by Paylocity and the
+  standalone Trace app is being sunset in early 2026; app.tracehq.com issues a
+  blanket 301 for every path (including /.well-known/*) to
+  https://www.paylocity.com/products/finance/headcount-planning/, so its 200s
+  are the Paylocity marketing page, not real documents. api/docs/developer/status
+  subdomains do not resolve.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+- path: /llms.txt
+  status: 404
+hosts_probed:
+- host: www.tracehq.com
+  status: 200
+- host: app.tracehq.com
+  status: 301
+  redirect: https://www.paylocity.com/products/finance/headcount-planning/
+- host: api.tracehq.com
+  status: no-dns
+- host: docs.tracehq.com
+  status: no-dns
+- host: developer.tracehq.com
+  status: no-dns
+- host: status.tracehq.com
+  status: no-dns

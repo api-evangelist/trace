@@ -1,0 +1,15 @@
+# Trace
+
+> Trace (tracehq.com) is a workforce planning, headcount management, and procurement platform — "plan and manage your most important investment: your people." Trace was acquired by Paylocity, now operates as "TraceHQ, A Paylocity Company," and the standalone Trace app is being sunset in early 2026 as the product folds into Paylocity for Finance (headcount planning).
+
+Trace publishes no public developer portal, API documentation, OpenAPI specification, SDKs, or well-known discovery surface. The app host (app.tracehq.com) redirects all paths to Paylocity's headcount-planning product page. For the successor product, see Paylocity.
+
+## Company
+
+- [Website](https://www.tracehq.com/): Trace homepage (TraceHQ, A Paylocity Company)
+- [Acquisition press release](https://www.paylocity.com/resources/resource-library/press-release/paylocity-announces-acquisition-of-trace/): Paylocity announces acquisition of Trace
+- [Successor product](https://www.paylocity.com/products/finance/headcount-planning/): Paylocity Headcount Planning (formerly Trace)
+
+## Profile
+
+- [APIs.json](https://raw.githubusercontent.com/api-evangelist/trace/refs/heads/main/apis.yml): API Evangelist network profile for Trace

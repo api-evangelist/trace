@@ -1,9 +1,25 @@
 aid: trace
 name: Trace
-description: Trace is a company surfaced as a portfolio company of 500-global, uncork-capital and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: Trace (tracehq.com) is a workforce planning, headcount management, and
+  procurement platform where companies plan and manage headcount as their most important
+  investment, offering instant workforce analytics and headcount planning. Trace was
+  backed by 500 Global and Uncork Capital, was acquired by Paylocity (now branded
+  "TraceHQ, A Paylocity Company"), and the standalone Trace app is being sunset in
+  early 2026 as the product folds into Paylocity for Finance headcount planning. Trace
+  publishes no public developer portal, API documentation, or SDKs.
 url: https://raw.githubusercontent.com/api-evangelist/trace/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/5ef4b38e0873bc075da0a368/63c3a3bc9efaf3129d6806c2_Main%20Trace.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,11 +27,24 @@ x-backed-by:
 - uncork-capital
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: acquired
+x-acquired-by: paylocity
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Workforce Planning
+- Headcount Planning
+- Human Resources
+- Finance
+- Analytics
+- Procurement
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +52,13 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/trace-domain-security.yml
 - type: Website
   url: https://tracehq.com
+- type: LLMsTxt
+  url: llms/trace-llms.txt
+- type: TermsOfService
+  url: https://www.paylocity.com/terms-and-conditions.html
+- type: PrivacyPolicy
+  url: https://www.paylocity.com/company/protecting-our-clients/privacy-center.html
