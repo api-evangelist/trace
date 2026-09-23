@@ -2,26 +2,10 @@ generated: '2026-07-21'
 method: searched
 source: live probes of https://www.tracehq.com and https://app.tracehq.com
 host: https://www.tracehq.com
-notes: >-
-  No well-known discovery surface found. Trace was acquired by Paylocity and the
-  standalone Trace app is being sunset in early 2026; app.tracehq.com issues a
-  blanket 301 for every path (including /.well-known/*) to
-  https://www.paylocity.com/products/finance/headcount-planning/, so its 200s
-  are the Paylocity marketing page, not real documents. api/docs/developer/status
-  subdomains do not resolve.
-documents:
-- path: /.well-known/security.txt
-  status: 404
-- path: /.well-known/openid-configuration
-  status: 404
-- path: /.well-known/oauth-authorization-server
-  status: 404
-- path: /.well-known/api-catalog
-  status: 404
-- path: /.well-known/ai-plugin.json
-  status: 404
-- path: /llms.txt
-  status: 404
+notes: No well-known discovery surface found. Trace was acquired by Paylocity and the standalone Trace
+  app is being sunset in early 2026; app.tracehq.com issues a blanket 301 for every path (including /.well-known/*)
+  to https://www.paylocity.com/products/finance/headcount-planning/, so its 200s are the Paylocity marketing
+  page, not real documents. api/docs/developer/status subdomains do not resolve.
 hosts_probed:
 - host: www.tracehq.com
   status: 200
@@ -36,3 +20,21 @@ hosts_probed:
   status: no-dns
 - host: status.tracehq.com
   status: no-dns
+hosts:
+- host: https://www.tracehq.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
